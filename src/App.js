@@ -1,6 +1,6 @@
 import './App.css';
-import Carousel from './components/Carousel';
-import { SlideContent } from './components/SlideContent';
+import Carousel from './Carousel';
+import { SlideContent } from './SlideContent';
 
 function App() {
   return <Carousel children={SlideContent} />;
