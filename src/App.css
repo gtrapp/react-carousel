@@ -22,7 +22,7 @@
 
  .buttons {
   position: absolute;
-  bottom: 5px;
+  bottom: 15%;
   clear: both;
 }
 
@@ -37,7 +37,7 @@
 }
 .button-next {
   position: relative;
-  left: 30px;
+  left: 50px;
 }
 
 .button-previous {

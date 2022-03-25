@@ -3,6 +3,7 @@ import { SlideContent } from "./SlideContent";
 
 const Carousel = ({ delay, children }) => {
   const [current, setCurrent] = useState(0);
+  
   const length = children.length;
 
   useEffect(() => {
@@ -13,7 +14,7 @@ const Carousel = ({ delay, children }) => {
     }, delay);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [delay, length]);
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -35,25 +36,21 @@ const Carousel = ({ delay, children }) => {
             className={index === current ? "carousel active" : "carousel"}
             key={index}
           >
-            {index === current && <span>{slide.content}</span>}
+            {index === current && <span>{slide}</span>}
           </div>
         );
       })}
-
-      <div className={"buttons"}>
+      
+      <div className={children.length < 2 ? "buttons hide" : "buttons"}>
         <button className="button-previous" onClick={prevSlide}>
-          {" "}
-          Previous{" "}
+          Previous
         </button>
         <button className="button-next" onClick={nextSlide}>
-          {" "}
-          Next{" "}
+          Next
         </button>
       </div>
     </div>
   );
 };
-
-/* <div className={index < 1 ? "buttons hide" : "buttons"}> */
 
 export default Carousel;
