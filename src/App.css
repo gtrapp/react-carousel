@@ -3,39 +3,21 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
 }
-
-.image {
-  width: 500px;
-  height: 600px;
-  border-radius: 10px;
-  background-color: green;
-  display: block;
-}
-
-/* .carousel {
-  opacity: 0;
-  transition-duration: 1s ease;
-
-} */
 
 .carousel.active {
   opacity: 1;
-  /* transition-duration: 1s; */
-  /* transform: scale(1.08); */
 }
  span {
-  display: block;
    font-size: 5rem;
    width: 350px;
-   height: 250px;
+   height: 120px;
+   padding: 70px 0;
    text-align: center;
-   justify-content: center;
-   /* display: flex; */
    background-color: lightgray;
    border-radius: 10px;
-   border-color: black;
+   border: 2px solid grey;
  }
 
  .buttons {
@@ -50,7 +32,6 @@
   color: #fff;
   z-index: 10;
   cursor: pointer;
-  /* user-select: none; */
   border-radius: 10px;
   background-color: dodgerblue;
 }
@@ -66,4 +47,8 @@
 
 button:hover {
   background-color: rgb(21, 106, 192);
+}
+
+.hide {
+  display: none;
 }
